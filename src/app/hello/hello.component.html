@@ -1,0 +1,14 @@
+<ul class="list-group">
+  <li *ngFor="let product of products" class="list-group-item">
+    {{product.name}}
+  </li>
+</ul>
+
+<form>
+  <div class="form-group">
+    <label for="exNewTransaction">New Transaction name</label>
+    <input type="text" class="form-control" id="exNewTransaction" placeholder="Name" [(ngModel)]="newProduct.name"
+      name="name">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="saveTransaction()">Submit</button>
+</form>
